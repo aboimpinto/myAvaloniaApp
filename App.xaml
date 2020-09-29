@@ -4,9 +4,13 @@
     xmlns:local="clr-namespace:myAvaloniaApp"
     x:Class="myAvaloniaApp.App">
 
-    <Application.DataTemplates>
+    <!-- <Application.DataTemplates>
         <local:ViewLocator/>
-    </Application.DataTemplates>
+    </Application.DataTemplates> -->
+
+    <Application.Resources>
+        <local:Locator x:key="locator" />
+    </Application.Resources>
 
     <Application.Styles>
         <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>

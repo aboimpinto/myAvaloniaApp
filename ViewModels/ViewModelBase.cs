@@ -5,7 +5,7 @@ using ReactiveUI;
 
 namespace myAvaloniaApp.ViewModels
 {
-    public class ViewModelBase : ReactiveObject
+    public class ViewModelBase : ReactiveObject, IViewModel
     {
     }
 }

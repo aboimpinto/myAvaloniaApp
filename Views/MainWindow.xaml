@@ -7,11 +7,12 @@
     mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
     x:Class="myAvaloniaApp.Views.MainWindow"
     Icon="/Assets/avalonia-logo.ico"
-    Title="myAvaloniaApp">
+    Title="myAvaloniaApp"
+    DataContext="{Binding [MainWindowViewModel], Source={StaticResource locator}}">
 
-    <Design.DataContext>
+    <!-- <Design.DataContext>
         <vm:MainWindowViewModel/>
-    </Design.DataContext>
+    </Design.DataContext> -->
 
     <StackPanel>
         <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
