@@ -9,7 +9,7 @@
     </Application.DataTemplates> -->
 
     <Application.Resources>
-        <local:Locator x:key="locator" />
+        <local:Locator x:Key="locator" />
     </Application.Resources>
 
     <Application.Styles>
