@@ -1,8 +1,10 @@
 ﻿using Avalonia;
 using Avalonia.Logging.Serilog;
 using Avalonia.ReactiveUI;
+using Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using myAvaloniaApp.ViewModels;
+using ViewModels;
 
 namespace myAvaloniaApp
 {
@@ -18,7 +20,8 @@ namespace myAvaloniaApp
         {
             // Locator.CurrentMutable.Register<IViewModel, MainWindowViewModel>();
             _serviceProvider = new ServiceCollection()
-                .AddTransient<IViewModel, MainWindowViewModel>()
+                .AddScoped<IViewModel, MainWindowViewModel>("MainWindowViewModel")
+                .AddScoped<IViewModel, MainViewModel>("MainViewModel")
                 .BuildServiceProvider();
 
             BuildAvaloniaApp()
