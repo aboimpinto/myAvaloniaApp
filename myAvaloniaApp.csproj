@@ -19,7 +19,5 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="*"/>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="*"/>
     <PackageReference Include="Avalonia.Xaml.Interactivity" Version="*"/>
-    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="*"/>
-    <PackageReference Include="Avalonia.Xaml.Interactions.Custom" Version="*"/>
   </ItemGroup>
 </Project>

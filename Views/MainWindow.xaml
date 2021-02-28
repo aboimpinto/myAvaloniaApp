@@ -5,8 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:i="using:Avalonia.Xaml.Interactivity"
-    xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
-    xmlns:iac="using:Avalonia.Xaml.Interactions.Custom"
     xmlns:local="clr-namespace:myAvaloniaApp.Views"
     mc:Ignorable="d" 
     x:Class="myAvaloniaApp.Views.MainWindow"
