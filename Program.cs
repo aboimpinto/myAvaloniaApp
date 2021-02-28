@@ -1,5 +1,5 @@
 ﻿using Avalonia;
-using Avalonia.Logging.Serilog;
+// using Avalonia.Logging.Serilog;
 using Avalonia.ReactiveUI;
 using Extensions;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,7 +32,7 @@ namespace myAvaloniaApp
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug()
+                // .LogToDebug()
                 .UseReactiveUI();
     }
 }

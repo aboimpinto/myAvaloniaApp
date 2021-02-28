@@ -14,9 +14,12 @@
     <AvaloniaResource Include="Assets\**"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.9.12"/>
-    <PackageReference Include="Avalonia.Desktop" Version="0.9.12"/>
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.12"/>
+    <PackageReference Include="Avalonia" Version="*"/>
+    <PackageReference Include="Avalonia.Desktop" Version="*"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="*"/>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="*"/>
+    <PackageReference Include="Avalonia.Xaml.Interactivity" Version="*"/>
+    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="*"/>
+    <PackageReference Include="Avalonia.Xaml.Interactions.Custom" Version="*"/>
   </ItemGroup>
 </Project>

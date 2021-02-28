@@ -4,19 +4,29 @@
     xmlns:vm="clr-namespace:myAvaloniaApp.ViewModels;assembly=myAvaloniaApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Avalonia.Xaml.Interactivity"
+    xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+    xmlns:iac="using:Avalonia.Xaml.Interactions.Custom"
     xmlns:local="clr-namespace:myAvaloniaApp.Views"
     mc:Ignorable="d" 
-    d:DesignWidth="800" 
-    d:DesignHeight="450"
     x:Class="myAvaloniaApp.Views.MainWindow"
     Icon="/Assets/avalonia-logo.ico"
     Title="myAvaloniaApp"
+    CanResize="False"
+    HasSystemDecorations="False"
+    WindowStartupLocation="CenterScreen"
     DataContext="{Binding [MainWindowViewModel], Source={StaticResource locator}}">
+
+    <i:Interaction.Behaviors>
+        <local:WindowCloseBehavior CloseTrigger="{Binding CloseApplication}" />
+    </i:Interaction.Behaviors>
 
     <StackPanel>
         <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button Content = "Click me!" Command = "{Binding ClickMeCommand}" />
         <local:MainView />
+
+        <Button Content="Close" Command="{Binding CloseApplicationCommand}" />
     </StackPanel>
 
 </Window>
