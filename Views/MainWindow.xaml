@@ -19,12 +19,40 @@
         <local:WindowCloseBehavior CloseTrigger="{Binding CloseApplication}" />
     </i:Interaction.Behaviors>
 
-    <StackPanel>
+     <Grid 
+        RowDefinitions="5,*,5" 
+        ColumnDefinitions="5,*,5">
+
+        <DockPanel Grid.Column="1" Grid.Row="1">
+            <Grid Name="TitleBar" Background="LightBlue" DockPanel.Dock="Top" ColumnDefinitions="Auto,*,Auto">
+                <TextBlock VerticalAlignment="Center" Margin="5,0,0,0">Title</TextBlock>
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <StackPanel.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Margin" Value="2"/>
+                        </Style>
+                    </StackPanel.Styles>
+
+                    <Button Name="MinimizeButton">_</Button>
+                    <Button Name="MaximizeButton">[ ]</Button>
+                    <Button Name="CloseButton" Command="{Binding CloseApplicationCommand}">X</Button>
+                </StackPanel>
+            </Grid>
+            <Border Background="White" Margin="5">
+                <StackPanel>
+                    <TextBlock>Hello world!</TextBlock>
+                </StackPanel>
+            </Border>
+        </DockPanel>
+
+     </Grid>
+
+    <!-- <StackPanel>
         <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button Content = "Click me!" Command = "{Binding ClickMeCommand}" />
         <local:MainView />
 
         <Button Content="Close" Command="{Binding CloseApplicationCommand}" />
-    </StackPanel>
+    </StackPanel> -->
 
 </Window>

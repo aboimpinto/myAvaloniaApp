@@ -13,6 +13,11 @@ namespace myAvaloniaApp.Views
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+
+            this.FindControl<Control>("TitleBar").PointerPressed += (i, e) =>
+            {
+                PlatformImpl?.BeginMoveDrag(e);
+            };
         }
     }
 }
