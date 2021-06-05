@@ -38,7 +38,8 @@ namespace myAvaloniaApp.Views
             // when closetrigger is true, close the window
             if (this.CloseTrigger)
             {
-                this.AssociatedObject.Close();
+                // this.AssociatedObject.Close();
+                Environment.Exit(0);
             }
         }
     }
